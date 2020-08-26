@@ -1,21 +1,17 @@
-setInterval(function () {
-  var launch = moment("2020-09-04");
-  var current = moment();
-  var diff = launch - current;
-  //console.log('The difference is', diff);
+const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
 
-  var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  //console.log(days);
+let countDown = new Date('Sep 4, 2020 00:00:00').getTime(),
+    x = setInterval(function() {    
 
-  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  //console.log(hours);
+      let now = new Date().getTime(),
+          distance = countDown - now;
 
-  var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  //console.log(minutes);
+      document.getElementById('days').innerText = Math.floor(distance / (day)),
+        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
 
-  var seconds = Math.floor((diff % (1000 * 60)) / 1000);
-  //console.log(seconds);
-
-  document.getElementById("date").innerText =
-    days + "D " + hours + "H " + minutes + "M " + seconds + "S";
-}, 1000);
+    }, second)
