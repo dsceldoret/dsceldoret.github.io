@@ -7,7 +7,7 @@
 div.flex_container {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../Images/pexels-philippe-donn-1169754-small.jpg") no-repeat center
+    url("../Images/michael-browning-D0ov97Td-xM-unsplash.jpg") no-repeat center
       center/cover;
   display: flex;
   justify-content: center;
@@ -30,7 +30,7 @@ div.flex_container h2 {
 @media screen and (min-width: 768px) {
   div.flex_container {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url("../Images/pexels-philippe-donn-1169754-large.jpg") no-repeat center
+      url("../Images/michael-browning-D0ov97Td-xM-unsplash.jpg") no-repeat center
         center/cover;
   }
 
